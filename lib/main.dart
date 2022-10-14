@@ -7,9 +7,12 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Flutter Demo',
-      home: SplashPage(),
+    return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+      ),
+      title: 'Market App',
+      home: MyHomePage(),
     );
   }
 }
@@ -32,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Market")),
+      appBar: AppBar(title: const Text("Farm Market")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -64,22 +67,22 @@ class _MyHomePageState extends State<MyHomePage> {
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
-            icon: Icon(Icons.people),
-            title: Text('Users'),
+            icon: Icon(Icons.production_quantity_limits),
+            title: Text('Products'),
             activeColor: Colors.black,
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
-            icon: Icon(Icons.message),
+            icon: Icon(Icons.shopping_bag),
             title: Text(
-              'Messages test for mes teset test test ',
+              'CheckOut  ',
             ),
             activeColor: Colors.black54,
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
-            icon: Icon(Icons.settings),
-            title: Text('Settings'),
+            icon: Icon(Icons.person),
+            title: Text('Account'),
             activeColor: Colors.black,
             textAlign: TextAlign.center,
           ),
